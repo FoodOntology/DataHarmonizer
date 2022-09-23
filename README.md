@@ -1,8 +1,8 @@
 # DataHarmonizer
 
-A standardized browser-based spreadsheet editor and validator that can be run offline and locally, which works of of [LinkML](https://linkml.io/) data specifications. This project, created by the Centre for Infectious Disease Genomics and One Health (CIDGOH), at Simon Fraser University, is now an open-source collaboration with contributions from the National Microbiome Data Collaborative (NMDC), the LinkML development team, and others.
+A standardized browser-based spreadsheet editor and validator that can be run offline and locally, which works of of [LinkML](https://linkml.io/) data specifications. This is an experimental version of DataHarmonizer being used to develop a **food recipe model** as part of the FoodOn project.
 
-Watch Rhiannon Cameron and Damion Dooley describe this application on [YouTube](https://www.youtube.com/watch?v=rdN2_Vhwb8E&t=38s&ab_channel=CANARIEInc.) at the Canadian Research Software Conference (CRSC2021).
+This project, created by the Centre for Infectious Disease Genomics and One Health (CIDGOH), at Simon Fraser University, is now an open-source collaboration with contributions from the National Microbiome Data Collaborative (NMDC), the LinkML development team, and others.  Watch Rhiannon Cameron and Damion Dooley describe this application on [YouTube](https://www.youtube.com/watch?v=rdN2_Vhwb8E&t=38s&ab_channel=CANARIEInc.) at the Canadian Research Software Conference (CRSC2021).
 
 |Chrome|Firefox|Edge|
 |---|---|---|
