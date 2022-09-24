@@ -1,0 +1,36 @@
+class_name	slot_group	slot_uri	title	name	google / schema.org	range	range_2	identifier	multivalued	required	recommended	minimum_value	maximum_value	pattern	structured_pattern	description	comments	examples		
+food recipe collection					CreativeWork															
+	general	linkml:iri	identifier		identifier -> URL	WhitespaceMinimizedString		TRUE		TRUE										
+	general	rdfs:label	recipe collection name		name -> Text	WhitespaceMinimizedString				TRUE										
+	general	dc:description	description		description -> Text	WhitespaceMinimizedString														
+																				
+food recipe					Recipe															
+	general	linkml:iri	identifier		identifier -> URL	WhitespaceMinimizedString		TRUE		TRUE										
+	general	rdfs:label	recipe name		name -> Text	WhitespaceMinimizedString				TRUE										
+	general	dc:description	description		description -> Text	WhitespaceMinimizedString														
+	general	NCIT:C42781	author		author -> Organization | Person	WhitespaceMinimizedString														
+	general	NCIT:C164483	created date	created	datePublished -> Date | dateTime	date														
+	general	FOODON:00002451	technique		cookingMethod -> Text	food process menu			TRUE											
+	general	dc:subject	keywords		keywords -> Text | URL | DefinedTerm	WhitespaceMinimizedString			TRUE											
+	general	FOODON:00002373	course		recipeCategory -> Text	food course menu														
+	general	HANCESTRO:0004	cuisine		recipeCuisine -> Text	cuisine menu														
+	general		menu		(n/a in sense of menu style)	menu style														
+	general		cultural event		n/a	cultural event menu														
+	general	ONS:0000094	dietary pattern		suitableForDiet -> RestrictedDiet	dietary pattern menu														
+	general		season			season menu														
+	general		aggregateRating		aggregateRating -> AggregateRating	WhitespaceMinimizedString														
+	general		serving yeild		recipeYeild -> Quantative Value | Text	WhitespaceMinimizedString														
+	general		serving tip		HowToTip???	WhitespaceMinimizedString														
+																				
+	timing		Total time		totalTime -> Duration	WhitespaceMinimizedString														
+	timing		Cooking time		cookTime -> Duration	WhitespaceMinimizedString														
+	timing		Perform time		performTime -> Duration	WhitespaceMinimizedString														
+	timing		Preparation time		prepTime -> Duration	WhitespaceMinimizedString														
+																				
+																				
+																				
+																				
+	components	FOODON:00004082	ingredients		recipeIngredient -> Text (or array of Text)	WhitespaceMinimizedString			TRUE											
+	components	FOODON:00004083	devices		n/a	WhitespaceMinimizedString			TRUE											
+	components	FOODON:00004084	instructions		recipeInstructions -> Text | ItemList  (HowToSection & HowToStep)	WhitespaceMinimizedString			TRUE											
+																				

@@ -1,0 +1,410 @@
+title	meaning	menu_1	menu_2	menu_3	menu_4	menu_5	description
+food process menu							
+							
+							
+							
+food course menu		Breakfast or Brunch					
+		Lunch					
+		Appetizer or Snack					
+		Dinner					
+		Dessert					
+		Drink & Cocktail					
+		Side Dish					
+		Grilling or BBQ					
+		Microwave					
+		Quick or Easy					
+		Slow-Cooker					
+		Air Fryer					
+		Instant Pot					
+		Baking					
+							
+menu style							
+		formal dining					
+		casual dining					
+		street food					
+							
+cultural event menu		Dinner Party					
+		Game Day					
+		Valentine's Day					
+		St. Patrick's Day					
+		Easter					
+		Cinco de Mayo					
+		Mother's Day					
+		Memorial Day					
+		Juneteenth					
+		4th of July					
+		Halloween					
+		Thanksgiving					
+		Hanukkah					
+		Christmas					
+		New Year's					
+							
+							
+dietary pattern menu		Keto					
+		Healthy					
+		Vegetarian					
+		Vegan					
+		Mediterranean Diet					
+		Weight Watchers					
+		Low-Carb					
+		Gluten-Free					
+		Chicken					
+		Salmon					
+		Pork Chop					
+		Ground Beef					
+		Shrimp					
+							
+season menu		Spring					
+		Summer					
+		Fall					
+		Winter					
+							
+							
+cuisine menu	HANCESTRO:0005	European					
+	HANCESTRO:0307		Italian				
+	HANCESTRO:0309			Sardinian			
+	HANCESTRO:0310			Val Borbera			
+	HANCESTRO:0311			Friuli Venezia Giulia			
+	HANCESTRO:0312			Carlantino			
+	HANCESTRO:0556			Cilento			
+	HANCESTRO:0559			Italian founder			
+	HANCESTRO:0569			Talana			
+	HANCESTRO:0313		Old Order Amish				
+	HANCESTRO:0314		Sorbian				
+	HANCESTRO:0315		Hutterite				
+	HANCESTRO:0316		Amish				
+	HANCESTRO:0317		Erasmus Rucphen				
+	HANCESTRO:0318		Orcadian				
+	HANCESTRO:0319		Korculan				
+	HANCESTRO:0320		Dutch				
+	HANCESTRO:0323			Dutch founder			
+	HANCESTRO:0321		Finnish				
+	HANCESTRO:0322			Finnish founder			
+	HANCESTRO:0560			Northern Finnish founder			
+	HANCESTRO:0354		Canadian				
+	HANCESTRO:0558			French Canadian founder			
+	HANCESTRO:0369		Icelandic				
+	HANCESTRO:0383		Irish				
+	HANCESTRO:0551			genetically homogenous Irish			
+	HANCESTRO:0392		Spanish				
+	HANCESTRO:0462		British				
+	HANCESTRO:0561		Romanian founder				
+	HANCESTRO:0563		South Tyrolean				
+	HANCESTRO:0564		Vis founder				
+	HANCESTRO:0565		Split founder				
+	HANCESTRO:0590		European American				
+	HANCESTRO:0008	Asian					
+	HANCESTRO:0006		South Asian				
+	HANCESTRO:0485			Bangladeshi			
+	HANCESTRO:0487			Indian			
+	HANCESTRO:0490			Pakistani			
+	HANCESTRO:0491			Sri Lankan			
+	HANCESTRO:0584			Sri Lankan Sinhalese			
+	HANCESTRO:0589			Punjabi Sikh			
+	HANCESTRO:0007		South East Asian				
+	HANCESTRO:0494			Indonesian			
+	HANCESTRO:0496			Malaysian			
+	HANCESTRO:0500			Thai			
+	HANCESTRO:0502			Vietnamese			
+	HANCESTRO:0009		East Asian				
+	HANCESTRO:0019			Japanese			
+	HANCESTRO:0020			Taiwanese			
+	HANCESTRO:0021			Chinese			
+	HANCESTRO:0024				Macanese		
+	HANCESTRO:0025				Singaporean Chinese		
+	HANCESTRO:0026				Hong Kong Chinese		
+	HANCESTRO:0027				Han Chinese		
+	HANCESTRO:0577				Dai Chinese		
+	HANCESTRO:0578				Hui Chinese		
+	HANCESTRO:0579				Jingpo Chinese		
+	HANCESTRO:0580				Malaysian Chinese		
+	HANCESTRO:0581				Uygur Chinese		
+	HANCESTRO:0022			Korean			
+	HANCESTRO:0023			Mongolian			
+	HANCESTRO:0582			Tibetan			
+	HANCESTRO:0583			Taiwanese Han			
+	HANCESTRO:0286		Central Asian				
+	HANCESTRO:0554			Silk Road founder			
+	HANCESTRO:0489		Nepalese				
+	HANCESTRO:0498		Filipino				
+	HANCESTRO:0010	African					
+	HANCESTRO:0011		Sub-Saharan African				
+	HANCESTRO:0535			Gambian			
+	HANCESTRO:0540			Malawian			
+	HANCESTRO:0544			Nigerian			
+	HANCESTRO:0548			Tanzanian			
+	HANCESTRO:0575			Yoruban			
+	HANCESTRO:0576			West African			
+	HANCESTRO:0591			Esan			
+	HANCESTRO:0592			Luhya			
+	HANCESTRO:0593			Maasai			
+	HANCESTRO:0594			Mende			
+	HANCESTRO:0013	Native American					
+	HANCESTRO:0570		Pima Indian				
+	HANCESTRO:0571		Plains American Indian				
+	HANCESTRO:0014	Hispanic or Latin American					
+	HANCESTRO:0352		Brazilian				
+	HANCESTRO:0404		Costa Rican				
+	HANCESTRO:0557			Costa Rican founder			
+	HANCESTRO:0405		Cuban				
+	HANCESTRO:0406		Dominican				
+	HANCESTRO:0415		Mexican				
+	HANCESTRO:0421		Puerto Rican				
+	HANCESTRO:0015	Greater Middle Eastern (Middle Eastern, North African or Persian)					
+	HANCESTRO:0331		Sudanese				
+	HANCESTRO:0332		Sahrawi				
+	HANCESTRO:0431		Algerian				
+	HANCESTRO:0432		Armenian				
+	HANCESTRO:0433		Azerbaijani				
+	HANCESTRO:0434		Bahraini				
+	HANCESTRO:0435		Cypriote				
+	HANCESTRO:0436		Egyptian				
+	HANCESTRO:0437		Georgian				
+	HANCESTRO:0438		Iranian				
+	HANCESTRO:0439		Iraqi				
+	HANCESTRO:0440		Israeli				
+	HANCESTRO:0441		Jordanian				
+	HANCESTRO:0442		Kuwaiti				
+	HANCESTRO:0443		Lebanese				
+	HANCESTRO:0444		Libyan				
+	HANCESTRO:0445		Moroccan				
+	HANCESTRO:0446		Palestinian				
+	HANCESTRO:0447		Omani				
+	HANCESTRO:0448		Qatari				
+	HANCESTRO:0449		Saudi				
+	HANCESTRO:0450		Tunisian				
+	HANCESTRO:0452		Emirati				
+	HANCESTRO:0453		Yemeni				
+	HANCESTRO:0461		Syrian				
+	HANCESTRO:0555		Arab Israeli founder				
+	HANCESTRO:0596		Arab				
+	HANCESTRO:0016	African American or Afro-Caribbean					
+	HANCESTRO:0333		Anguillan				
+	HANCESTRO:0334		Antiguan or Barbudan				
+	HANCESTRO:0335		Barbadian				
+	HANCESTRO:0336		Haitian				
+	HANCESTRO:0337		Jamaican				
+	HANCESTRO:0567		Afro-Caribbean				
+	HANCESTRO:0568		African American				
+	HANCESTRO:0017	Oceanian					
+	HANCESTRO:0471		Micronesian				
+	HANCESTRO:0476		Papua New Guinean				
+	HANCESTRO:0479		Solomon Islander				
+	HANCESTRO:0572		Kosraen				
+	HANCESTRO:0573		Native Hawaiian				
+	HANCESTRO:0574		Pacific Islander				
+	HANCESTRO:0018	uncategorised population					
+	HANCESTRO:0324		Ashkenazi Jew				
+	HANCESTRO:0341		Afghan				
+	HANCESTRO:0353		Bulgarian				
+	HANCESTRO:0379		Norfolk Islander				
+	HANCESTRO:0386		Russian				
+	HANCESTRO:0425		Surinamese				
+	HANCESTRO:0451		Turkish				
+	HANCESTRO:0554		Silk Road founder				
+	HANCESTRO:0585		Tatar				
+	HANCESTRO:0586		Bashkir				
+	HANCESTRO:0587		Martu Australian Aboriginal				
+	HANCESTRO:0588		Jewish Israeli				
+	HANCESTRO:0595		Eskimo				
+	HANCESTRO:0290	genetically isolated population					
+	HANCESTRO:0309		Sardinian				
+	HANCESTRO:0310		Val Borbera				
+	HANCESTRO:0311		Friuli Venezia Giulia				
+	HANCESTRO:0312		Carlantino				
+	HANCESTRO:0313		Old Order Amish				
+	HANCESTRO:0314		Sorbian				
+	HANCESTRO:0315		Hutterite				
+	HANCESTRO:0316		Amish				
+	HANCESTRO:0317		Erasmus Rucphen				
+	HANCESTRO:0318		Orcadian				
+	HANCESTRO:0319		Korculan				
+	HANCESTRO:0322		Finnish founder				
+	HANCESTRO:0323		Dutch founder				
+	HANCESTRO:0324		Ashkenazi Jew				
+	HANCESTRO:0379		Norfolk Islander				
+	HANCESTRO:0551		genetically homogenous Irish				
+	HANCESTRO:0554		Silk Road founder				
+	HANCESTRO:0555		Arab Israeli founder				
+	HANCESTRO:0556		Cilento				
+	HANCESTRO:0557		Costa Rican founder				
+	HANCESTRO:0558		French Canadian founder				
+	HANCESTRO:0559		Italian founder				
+	HANCESTRO:0560		Northern Finnish founder				
+	HANCESTRO:0561		Romanian founder				
+	HANCESTRO:0563		South Tyrolean				
+	HANCESTRO:0564		Vis founder				
+	HANCESTRO:0565		Split founder				
+	HANCESTRO:0569		Talana				
+	HANCESTRO:0552	Aboriginal Australian					
+	HANCESTRO:0566	undefined ancestry population					
+	HANCESTRO:0338		Tajikistani				
+	HANCESTRO:0339		Turkmen				
+	HANCESTRO:0340		Uzbekistani				
+	HANCESTRO:0342		Kazakhstani				
+	HANCESTRO:0343		Kyrgyzstani				
+	HANCESTRO:0344		Albanian				
+	HANCESTRO:0345		Andorran				
+	HANCESTRO:0346		Australian				
+	HANCESTRO:0347		Austrian				
+	HANCESTRO:0348		Belarusian				
+	HANCESTRO:0349		Belgian				
+	HANCESTRO:0350		Bermudian				
+	HANCESTRO:0351		Bosnian or Herzegovinian				
+	HANCESTRO:0355		Channel Islander				
+	HANCESTRO:0356		Chilean				
+	HANCESTRO:0357		Croatian				
+	HANCESTRO:0564			Vis founder			
+	HANCESTRO:0565			Split founder			
+	HANCESTRO:0358		Czech				
+	HANCESTRO:0359		Danish				
+	HANCESTRO:0360		Estonian				
+	HANCESTRO:0361		Faroese				
+	HANCESTRO:0362		Falkland Islander				
+	HANCESTRO:0363		French				
+	HANCESTRO:0364		German				
+	HANCESTRO:0365		Gibraltarian				
+	HANCESTRO:0366		Greek				
+	HANCESTRO:0367		Greenlander				
+	HANCESTRO:0368		Hungrian				
+	HANCESTRO:0370		Manx				
+	HANCESTRO:0371		Latvian				
+	HANCESTRO:0372		Liechtensteiner				
+	HANCESTRO:0373		Lithuanian				
+	HANCESTRO:0374		Luxembourgish				
+	HANCESTRO:0375		Maltese				
+	HANCESTRO:0376		Monegasque				
+	HANCESTRO:0377		Montenegrin				
+	HANCESTRO:0378		New Zealandish				
+	HANCESTRO:0380		Norwegian				
+	HANCESTRO:0381		Polish				
+	HANCESTRO:0382		Portugese				
+	HANCESTRO:0384		Moldovan				
+	HANCESTRO:0385		Romanian				
+	HANCESTRO:0561			Romanian founder			
+	HANCESTRO:0387		Saint-Pierrais or Miquelonnais				
+	HANCESTRO:0388		Sammarinese				
+	HANCESTRO:0389		Serb				
+	HANCESTRO:0390		Slovak				
+	HANCESTRO:0391		Slovene				
+	HANCESTRO:0393		Swedish				
+	HANCESTRO:0394		Swiss				
+	HANCESTRO:0395		Macedonian				
+	HANCESTRO:0396		Ukrainian				
+	HANCESTRO:0397		Argentine				
+	HANCESTRO:0398		Bahamian				
+	HANCESTRO:0399		Belizean				
+	HANCESTRO:0400		Bolivian				
+	HANCESTRO:0401		British Virgin Islander				
+	HANCESTRO:0402		Caymanian				
+	HANCESTRO:0403		Colombian				
+	HANCESTRO:0407		Ecuadorian				
+	HANCESTRO:0408		Salvadoran				
+	HANCESTRO:0409		French Guianese				
+	HANCESTRO:0410		Grenadian				
+	HANCESTRO:0411		Guatemalan				
+	HANCESTRO:0412		Guyanese				
+	HANCESTRO:0413		Honduran				
+	HANCESTRO:0414		Martinican				
+	HANCESTRO:0416		Montserratian				
+	HANCESTRO:0417		Nicaraguan				
+	HANCESTRO:0418		Panamanian				
+	HANCESTRO:0419		Paraguayan				
+	HANCESTRO:0420		Peruvian				
+	HANCESTRO:0422		Kittitian or Nevisian				
+	HANCESTRO:0423		Saint Lucian				
+	HANCESTRO:0424		Saint Vincentian				
+	HANCESTRO:0426		Trinidadian or Tobagonian				
+	HANCESTRO:0427		Turks and Caicos Islander				
+	HANCESTRO:0428		Virgin Islander				
+	HANCESTRO:0429		Uruguayan				
+	HANCESTRO:0430		Venezuelan				
+	HANCESTRO:0454		Aruban				
+	HANCESTRO:0455		Christmas Islander				
+	HANCESTRO:0456		Cocos Islander				
+	HANCESTRO:0457		Curacaoan				
+	HANCESTRO:0458		Kosovar				
+	HANCESTRO:0459		Northern Mariana Islander				
+	HANCESTRO:0460		South Sudanese				
+	HANCESTRO:0463		American				
+	HANCESTRO:0464		American Samoan				
+	HANCESTRO:0465		Cook Islander				
+	HANCESTRO:0466		Fijian				
+	HANCESTRO:0467		French Polynesian				
+	HANCESTRO:0468		Guamanian				
+	HANCESTRO:0469		I-Kiribati				
+	HANCESTRO:0470		Marshallese				
+	HANCESTRO:0472		Nauruan				
+	HANCESTRO:0473		New Caledonian				
+	HANCESTRO:0474		Niuean				
+	HANCESTRO:0475		Palauan				
+	HANCESTRO:0477		Pitcairn Islander				
+	HANCESTRO:0478		Samoan				
+	HANCESTRO:0480		Tokelauan				
+	HANCESTRO:0481		Tongan				
+	HANCESTRO:0482		Tuvaluan				
+	HANCESTRO:0483		Ni-Vanuato				
+	HANCESTRO:0484		Wallis and Futuna Islander				
+	HANCESTRO:0486		Bhutanese				
+	HANCESTRO:0488		Maldivian				
+	HANCESTRO:0492		Bruneian				
+	HANCESTRO:0493		Cambodian				
+	HANCESTRO:0495		Lao				
+	HANCESTRO:0497		Burmese				
+	HANCESTRO:0501		Timorese				
+	HANCESTRO:0503		Cameroonian				
+	HANCESTRO:0504		Cape Verdean				
+	HANCESTRO:0505		Chadian				
+	HANCESTRO:0506		Ethiopian				
+	HANCESTRO:0507		Kenyan				
+	HANCESTRO:0508		Liberian				
+	HANCESTRO:0509		Malagasy				
+	HANCESTRO:0510		Mauritanian				
+	HANCESTRO:0511		Mauritian				
+	HANCESTRO:0512		Mahoran				
+	HANCESTRO:0513		Namibian				
+	HANCESTRO:0514		Sao Tomean				
+	HANCESTRO:0515		Senegalese				
+	HANCESTRO:0516		Seychellois				
+	HANCESTRO:0517		Sierra Leonean				
+	HANCESTRO:0518		Somali				
+	HANCESTRO:0519		South African				
+	HANCESTRO:0520		St. Helenian				
+	HANCESTRO:0521		Ugandan				
+	HANCESTRO:0522		Angolan				
+	HANCESTRO:0523		Beninese				
+	HANCESTRO:0524		Motswana				
+	HANCESTRO:0525		Burkinabe				
+	HANCESTRO:0526		Burundian				
+	HANCESTRO:0527		Central African				
+	HANCESTRO:0528		Comoran				
+	HANCESTRO:0529		Congolese				
+	HANCESTRO:0530		Ivoirian				
+	HANCESTRO:0531		Djiboutian				
+	HANCESTRO:0532		Equatorial Guinean				
+	HANCESTRO:0533		Eritrean				
+	HANCESTRO:0534		Gabonese				
+	HANCESTRO:0536		Ghanaian				
+	HANCESTRO:0537		Guinean				
+	HANCESTRO:0538		Bissau-Guinean				
+	HANCESTRO:0539		Mosotho				
+	HANCESTRO:0541		Malian				
+	HANCESTRO:0542		Mozambican				
+	HANCESTRO:0543		Nigerien				
+	HANCESTRO:0545		Rwandan				
+	HANCESTRO:0546		Swazi				
+	HANCESTRO:0547		Togolese				
+	HANCESTRO:0549		Zambian				
+	HANCESTRO:0550		Zimbabweian				
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							

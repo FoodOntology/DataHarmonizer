@@ -1,20 +1,24 @@
-id: https://example.com/PHAC_Dexa
-name: "PHAC_Dexa"
+id: https://example.com/recipe
+name: "recipe"
 description: ""
 version: 1.0.0
 imports:
   - 'linkml:types'
 prefixes:
   linkml: 'https://w3id.org/linkml/'
-  GENEPIO: 'http://purl.obolibrary.org/obo/GENEPIO_'
+  FOODON: 'http://purl.obolibrary.org/obo/FOODON_'
 classes:
   dh_interface:
     name: dh_interface
     description: 'A DataHarmonizer interface'
-    from_schema: https://example.com/PHAC_Dexa
-  'PHAC Dexa':
-    name: 'PHAC Dexa'
-    description: Specification for PHAC Dexa clinical virus biosample data gathering
+    from_schema: https://example.com/FOODON
+  'food recipe collection':
+    name: 'food recipe collection'
+    description: Specification for a collection of recipies
+    is_a: dh_interface
+  'food recipe':
+    name: 'food recipe'
+    description: Specification for a particular food recipe
     is_a: dh_interface
 slots: {}
 enums: {}

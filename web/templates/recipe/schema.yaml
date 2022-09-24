@@ -1,0 +1,1594 @@
+id: https://example.com/recipe
+name: recipe
+description: ''
+version: 1.0.0
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  FOODON: http://purl.obolibrary.org/obo/FOODON_
+classes:
+  dh_interface:
+    name: dh_interface
+    description: A DataHarmonizer interface
+    from_schema: https://example.com/FOODON
+  food recipe collection:
+    name: food recipe collection
+    description: Specification for a collection of recipies
+    is_a: dh_interface
+    slots:
+    - identifier
+    - recipe collection name
+    - description
+    slot_usage:
+      identifier:
+        rank: 1
+        slot_group: general
+      recipe collection name:
+        rank: 2
+        slot_group: general
+      description:
+        rank: 3
+        slot_group: general
+  food recipe:
+    name: food recipe
+    description: Specification for a particular food recipe
+    is_a: dh_interface
+    slots:
+    - identifier
+    - recipe name
+    - description
+    - author
+    - created
+    - technique
+    - keywords
+    - course
+    - cuisine
+    - menu
+    - cultural event
+    - dietary pattern
+    - season
+    - aggregateRating
+    - serving yeild
+    - serving tip
+    - Total time
+    - Cooking time
+    - Perform time
+    - Preparation time
+    - ingredients
+    - devices
+    - instructions
+    slot_usage:
+      identifier:
+        rank: 1
+        slot_group: general
+      recipe name:
+        rank: 2
+        slot_group: general
+      description:
+        rank: 3
+        slot_group: general
+      author:
+        rank: 4
+        slot_group: general
+      created:
+        rank: 5
+        slot_group: general
+      technique:
+        rank: 6
+        slot_group: general
+      keywords:
+        rank: 7
+        slot_group: general
+      course:
+        rank: 8
+        slot_group: general
+      cuisine:
+        rank: 9
+        slot_group: general
+      menu:
+        rank: 10
+        slot_group: general
+      cultural event:
+        rank: 11
+        slot_group: general
+      dietary pattern:
+        rank: 12
+        slot_group: general
+      season:
+        rank: 13
+        slot_group: general
+      aggregateRating:
+        rank: 14
+        slot_group: general
+      serving yeild:
+        rank: 15
+        slot_group: general
+      serving tip:
+        rank: 16
+        slot_group: general
+      Total time:
+        rank: 17
+        slot_group: timing
+      Cooking time:
+        rank: 18
+        slot_group: timing
+      Perform time:
+        rank: 19
+        slot_group: timing
+      Preparation time:
+        rank: 20
+        slot_group: timing
+      ingredients:
+        rank: 21
+        slot_group: components
+      devices:
+        rank: 22
+        slot_group: components
+      instructions:
+        rank: 23
+        slot_group: components
+slots:
+  identifier:
+    name: identifier
+    title: identifier
+    slot_uri: linkml:iri
+    range: WhitespaceMinimizedString
+    identifier: true
+    required: true
+  recipe collection name:
+    name: recipe collection name
+    title: recipe collection name
+    slot_uri: rdfs:label
+    range: WhitespaceMinimizedString
+    required: true
+  description:
+    name: description
+    title: description
+    slot_uri: dc:description
+    range: WhitespaceMinimizedString
+  recipe name:
+    name: recipe name
+    title: recipe name
+    slot_uri: rdfs:label
+    range: WhitespaceMinimizedString
+    required: true
+  author:
+    name: author
+    title: author
+    slot_uri: NCIT:C42781
+    range: WhitespaceMinimizedString
+  created:
+    name: created
+    title: created date
+    slot_uri: NCIT:C164483
+    range: date
+  technique:
+    name: technique
+    title: technique
+    slot_uri: FOODON:00002451
+    range: food process menu
+    multivalued: true
+  keywords:
+    name: keywords
+    title: keywords
+    slot_uri: dc:subject
+    range: WhitespaceMinimizedString
+    multivalued: true
+  course:
+    name: course
+    title: course
+    slot_uri: FOODON:00002373
+    range: food course menu
+  cuisine:
+    name: cuisine
+    title: cuisine
+    slot_uri: HANCESTRO:0004
+    range: cuisine menu
+  menu:
+    name: menu
+    title: menu
+    range: menu style
+  cultural event:
+    name: cultural event
+    title: cultural event
+    range: cultural event menu
+  dietary pattern:
+    name: dietary pattern
+    title: dietary pattern
+    slot_uri: ONS:0000094
+    range: dietary pattern menu
+  season:
+    name: season
+    title: season
+    range: season menu
+  aggregateRating:
+    name: aggregateRating
+    title: aggregateRating
+    range: WhitespaceMinimizedString
+  serving yeild:
+    name: serving yeild
+    title: serving yeild
+    range: WhitespaceMinimizedString
+  serving tip:
+    name: serving tip
+    title: serving tip
+    range: WhitespaceMinimizedString
+  Total time:
+    name: Total time
+    title: Total time
+    range: WhitespaceMinimizedString
+  Cooking time:
+    name: Cooking time
+    title: Cooking time
+    range: WhitespaceMinimizedString
+  Perform time:
+    name: Perform time
+    title: Perform time
+    range: WhitespaceMinimizedString
+  Preparation time:
+    name: Preparation time
+    title: Preparation time
+    range: WhitespaceMinimizedString
+  ingredients:
+    name: ingredients
+    title: ingredients
+    slot_uri: FOODON:00004082
+    range: WhitespaceMinimizedString
+    multivalued: true
+  devices:
+    name: devices
+    title: devices
+    slot_uri: FOODON:00004083
+    range: WhitespaceMinimizedString
+    multivalued: true
+  instructions:
+    name: instructions
+    title: instructions
+    slot_uri: FOODON:00004084
+    range: WhitespaceMinimizedString
+    multivalued: true
+enums:
+  food process menu:
+    name: food process menu
+    permissible_values: {}
+  food course menu:
+    name: food course menu
+    permissible_values:
+      Breakfast or Brunch:
+        text: Breakfast or Brunch
+      Lunch:
+        text: Lunch
+      Appetizer or Snack:
+        text: Appetizer or Snack
+      Dinner:
+        text: Dinner
+      Dessert:
+        text: Dessert
+      Drink & Cocktail:
+        text: Drink & Cocktail
+      Side Dish:
+        text: Side Dish
+      Grilling or BBQ:
+        text: Grilling or BBQ
+      Microwave:
+        text: Microwave
+      Quick or Easy:
+        text: Quick or Easy
+      Slow-Cooker:
+        text: Slow-Cooker
+      Air Fryer:
+        text: Air Fryer
+      Instant Pot:
+        text: Instant Pot
+      Baking:
+        text: Baking
+  menu style:
+    name: menu style
+    permissible_values:
+      formal dining:
+        text: formal dining
+      casual dining:
+        text: casual dining
+      street food:
+        text: street food
+  cultural event menu:
+    name: cultural event menu
+    permissible_values:
+      Dinner Party:
+        text: Dinner Party
+      Game Day:
+        text: Game Day
+      Valentine's Day:
+        text: Valentine's Day
+      St. Patrick's Day:
+        text: St. Patrick's Day
+      Easter:
+        text: Easter
+      Cinco de Mayo:
+        text: Cinco de Mayo
+      Mother's Day:
+        text: Mother's Day
+      Memorial Day:
+        text: Memorial Day
+      Juneteenth:
+        text: Juneteenth
+      4th of July:
+        text: 4th of July
+      Halloween:
+        text: Halloween
+      Thanksgiving:
+        text: Thanksgiving
+      Hanukkah:
+        text: Hanukkah
+      Christmas:
+        text: Christmas
+      New Year's:
+        text: New Year's
+  dietary pattern menu:
+    name: dietary pattern menu
+    permissible_values:
+      Keto:
+        text: Keto
+      Healthy:
+        text: Healthy
+      Vegetarian:
+        text: Vegetarian
+      Vegan:
+        text: Vegan
+      Mediterranean Diet:
+        text: Mediterranean Diet
+      Weight Watchers:
+        text: Weight Watchers
+      Low-Carb:
+        text: Low-Carb
+      Gluten-Free:
+        text: Gluten-Free
+      Chicken:
+        text: Chicken
+      Salmon:
+        text: Salmon
+      Pork Chop:
+        text: Pork Chop
+      Ground Beef:
+        text: Ground Beef
+      Shrimp:
+        text: Shrimp
+  season menu:
+    name: season menu
+    permissible_values:
+      Spring:
+        text: Spring
+      Summer:
+        text: Summer
+      Fall:
+        text: Fall
+      Winter:
+        text: Winter
+  cuisine menu:
+    name: cuisine menu
+    permissible_values:
+      European:
+        text: European
+        meaning: HANCESTRO:0005
+      Italian:
+        text: Italian
+        meaning: HANCESTRO:0307
+        is_a: European
+      Sardinian:
+        text: Sardinian
+        meaning: HANCESTRO:0309
+        is_a: genetically isolated population
+      Val Borbera:
+        text: Val Borbera
+        meaning: HANCESTRO:0310
+        is_a: genetically isolated population
+      Friuli Venezia Giulia:
+        text: Friuli Venezia Giulia
+        meaning: HANCESTRO:0311
+        is_a: genetically isolated population
+      Carlantino:
+        text: Carlantino
+        meaning: HANCESTRO:0312
+        is_a: genetically isolated population
+      Cilento:
+        text: Cilento
+        meaning: HANCESTRO:0556
+        is_a: genetically isolated population
+      Italian founder:
+        text: Italian founder
+        meaning: HANCESTRO:0559
+        is_a: genetically isolated population
+      Talana:
+        text: Talana
+        meaning: HANCESTRO:0569
+        is_a: genetically isolated population
+      Old Order Amish:
+        text: Old Order Amish
+        meaning: HANCESTRO:0313
+        is_a: genetically isolated population
+      Sorbian:
+        text: Sorbian
+        meaning: HANCESTRO:0314
+        is_a: genetically isolated population
+      Hutterite:
+        text: Hutterite
+        meaning: HANCESTRO:0315
+        is_a: genetically isolated population
+      Amish:
+        text: Amish
+        meaning: HANCESTRO:0316
+        is_a: genetically isolated population
+      Erasmus Rucphen:
+        text: Erasmus Rucphen
+        meaning: HANCESTRO:0317
+        is_a: genetically isolated population
+      Orcadian:
+        text: Orcadian
+        meaning: HANCESTRO:0318
+        is_a: genetically isolated population
+      Korculan:
+        text: Korculan
+        meaning: HANCESTRO:0319
+        is_a: genetically isolated population
+      Dutch:
+        text: Dutch
+        meaning: HANCESTRO:0320
+        is_a: European
+      Dutch founder:
+        text: Dutch founder
+        meaning: HANCESTRO:0323
+        is_a: genetically isolated population
+      Finnish:
+        text: Finnish
+        meaning: HANCESTRO:0321
+        is_a: European
+      Finnish founder:
+        text: Finnish founder
+        meaning: HANCESTRO:0322
+        is_a: genetically isolated population
+      Northern Finnish founder:
+        text: Northern Finnish founder
+        meaning: HANCESTRO:0560
+        is_a: genetically isolated population
+      Canadian:
+        text: Canadian
+        meaning: HANCESTRO:0354
+        is_a: European
+      French Canadian founder:
+        text: French Canadian founder
+        meaning: HANCESTRO:0558
+        is_a: genetically isolated population
+      Icelandic:
+        text: Icelandic
+        meaning: HANCESTRO:0369
+        is_a: European
+      Irish:
+        text: Irish
+        meaning: HANCESTRO:0383
+        is_a: European
+      genetically homogenous Irish:
+        text: genetically homogenous Irish
+        meaning: HANCESTRO:0551
+        is_a: genetically isolated population
+      Spanish:
+        text: Spanish
+        meaning: HANCESTRO:0392
+        is_a: European
+      British:
+        text: British
+        meaning: HANCESTRO:0462
+        is_a: European
+      Romanian founder:
+        text: Romanian founder
+        meaning: HANCESTRO:0561
+        is_a: Romanian
+      South Tyrolean:
+        text: South Tyrolean
+        meaning: HANCESTRO:0563
+        is_a: genetically isolated population
+      Vis founder:
+        text: Vis founder
+        meaning: HANCESTRO:0564
+        is_a: Croatian
+      Split founder:
+        text: Split founder
+        meaning: HANCESTRO:0565
+        is_a: Croatian
+      European American:
+        text: European American
+        meaning: HANCESTRO:0590
+        is_a: European
+      Asian:
+        text: Asian
+        meaning: HANCESTRO:0008
+      South Asian:
+        text: South Asian
+        meaning: HANCESTRO:0006
+        is_a: Asian
+      Bangladeshi:
+        text: Bangladeshi
+        meaning: HANCESTRO:0485
+        is_a: South Asian
+      Indian:
+        text: Indian
+        meaning: HANCESTRO:0487
+        is_a: South Asian
+      Pakistani:
+        text: Pakistani
+        meaning: HANCESTRO:0490
+        is_a: South Asian
+      Sri Lankan:
+        text: Sri Lankan
+        meaning: HANCESTRO:0491
+        is_a: South Asian
+      Sri Lankan Sinhalese:
+        text: Sri Lankan Sinhalese
+        meaning: HANCESTRO:0584
+        is_a: South Asian
+      Punjabi Sikh:
+        text: Punjabi Sikh
+        meaning: HANCESTRO:0589
+        is_a: South Asian
+      South East Asian:
+        text: South East Asian
+        meaning: HANCESTRO:0007
+        is_a: Asian
+      Indonesian:
+        text: Indonesian
+        meaning: HANCESTRO:0494
+        is_a: South East Asian
+      Malaysian:
+        text: Malaysian
+        meaning: HANCESTRO:0496
+        is_a: South East Asian
+      Thai:
+        text: Thai
+        meaning: HANCESTRO:0500
+        is_a: South East Asian
+      Vietnamese:
+        text: Vietnamese
+        meaning: HANCESTRO:0502
+        is_a: South East Asian
+      East Asian:
+        text: East Asian
+        meaning: HANCESTRO:0009
+        is_a: Asian
+      Japanese:
+        text: Japanese
+        meaning: HANCESTRO:0019
+        is_a: East Asian
+      Taiwanese:
+        text: Taiwanese
+        meaning: HANCESTRO:0020
+        is_a: East Asian
+      Chinese:
+        text: Chinese
+        meaning: HANCESTRO:0021
+        is_a: East Asian
+      Macanese:
+        text: Macanese
+        meaning: HANCESTRO:0024
+        is_a: Chinese
+      Singaporean Chinese:
+        text: Singaporean Chinese
+        meaning: HANCESTRO:0025
+        is_a: Chinese
+      Hong Kong Chinese:
+        text: Hong Kong Chinese
+        meaning: HANCESTRO:0026
+        is_a: Chinese
+      Han Chinese:
+        text: Han Chinese
+        meaning: HANCESTRO:0027
+        is_a: Chinese
+      Dai Chinese:
+        text: Dai Chinese
+        meaning: HANCESTRO:0577
+        is_a: Chinese
+      Hui Chinese:
+        text: Hui Chinese
+        meaning: HANCESTRO:0578
+        is_a: Chinese
+      Jingpo Chinese:
+        text: Jingpo Chinese
+        meaning: HANCESTRO:0579
+        is_a: Chinese
+      Malaysian Chinese:
+        text: Malaysian Chinese
+        meaning: HANCESTRO:0580
+        is_a: Chinese
+      Uygur Chinese:
+        text: Uygur Chinese
+        meaning: HANCESTRO:0581
+        is_a: Chinese
+      Korean:
+        text: Korean
+        meaning: HANCESTRO:0022
+        is_a: East Asian
+      Mongolian:
+        text: Mongolian
+        meaning: HANCESTRO:0023
+        is_a: East Asian
+      Tibetan:
+        text: Tibetan
+        meaning: HANCESTRO:0582
+        is_a: East Asian
+      Taiwanese Han:
+        text: Taiwanese Han
+        meaning: HANCESTRO:0583
+        is_a: East Asian
+      Central Asian:
+        text: Central Asian
+        meaning: HANCESTRO:0286
+        is_a: Asian
+      Silk Road founder:
+        text: Silk Road founder
+        meaning: HANCESTRO:0554
+        is_a: genetically isolated population
+      Nepalese:
+        text: Nepalese
+        meaning: HANCESTRO:0489
+        is_a: Asian
+      Filipino:
+        text: Filipino
+        meaning: HANCESTRO:0498
+        is_a: Asian
+      African:
+        text: African
+        meaning: HANCESTRO:0010
+      Sub-Saharan African:
+        text: Sub-Saharan African
+        meaning: HANCESTRO:0011
+        is_a: African
+      Gambian:
+        text: Gambian
+        meaning: HANCESTRO:0535
+        is_a: Sub-Saharan African
+      Malawian:
+        text: Malawian
+        meaning: HANCESTRO:0540
+        is_a: Sub-Saharan African
+      Nigerian:
+        text: Nigerian
+        meaning: HANCESTRO:0544
+        is_a: Sub-Saharan African
+      Tanzanian:
+        text: Tanzanian
+        meaning: HANCESTRO:0548
+        is_a: Sub-Saharan African
+      Yoruban:
+        text: Yoruban
+        meaning: HANCESTRO:0575
+        is_a: Sub-Saharan African
+      West African:
+        text: West African
+        meaning: HANCESTRO:0576
+        is_a: Sub-Saharan African
+      Esan:
+        text: Esan
+        meaning: HANCESTRO:0591
+        is_a: Sub-Saharan African
+      Luhya:
+        text: Luhya
+        meaning: HANCESTRO:0592
+        is_a: Sub-Saharan African
+      Maasai:
+        text: Maasai
+        meaning: HANCESTRO:0593
+        is_a: Sub-Saharan African
+      Mende:
+        text: Mende
+        meaning: HANCESTRO:0594
+        is_a: Sub-Saharan African
+      Native American:
+        text: Native American
+        meaning: HANCESTRO:0013
+      Pima Indian:
+        text: Pima Indian
+        meaning: HANCESTRO:0570
+        is_a: Native American
+      Plains American Indian:
+        text: Plains American Indian
+        meaning: HANCESTRO:0571
+        is_a: Native American
+      Hispanic or Latin American:
+        text: Hispanic or Latin American
+        meaning: HANCESTRO:0014
+      Brazilian:
+        text: Brazilian
+        meaning: HANCESTRO:0352
+        is_a: Hispanic or Latin American
+      Costa Rican:
+        text: Costa Rican
+        meaning: HANCESTRO:0404
+        is_a: Hispanic or Latin American
+      Costa Rican founder:
+        text: Costa Rican founder
+        meaning: HANCESTRO:0557
+        is_a: genetically isolated population
+      Cuban:
+        text: Cuban
+        meaning: HANCESTRO:0405
+        is_a: Hispanic or Latin American
+      Dominican:
+        text: Dominican
+        meaning: HANCESTRO:0406
+        is_a: Hispanic or Latin American
+      Mexican:
+        text: Mexican
+        meaning: HANCESTRO:0415
+        is_a: Hispanic or Latin American
+      Puerto Rican:
+        text: Puerto Rican
+        meaning: HANCESTRO:0421
+        is_a: Hispanic or Latin American
+      Greater Middle Eastern (Middle Eastern, North African or Persian):
+        text: Greater Middle Eastern (Middle Eastern, North African or Persian)
+        meaning: HANCESTRO:0015
+      Sudanese:
+        text: Sudanese
+        meaning: HANCESTRO:0331
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Sahrawi:
+        text: Sahrawi
+        meaning: HANCESTRO:0332
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Algerian:
+        text: Algerian
+        meaning: HANCESTRO:0431
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Armenian:
+        text: Armenian
+        meaning: HANCESTRO:0432
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Azerbaijani:
+        text: Azerbaijani
+        meaning: HANCESTRO:0433
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Bahraini:
+        text: Bahraini
+        meaning: HANCESTRO:0434
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Cypriote:
+        text: Cypriote
+        meaning: HANCESTRO:0435
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Egyptian:
+        text: Egyptian
+        meaning: HANCESTRO:0436
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Georgian:
+        text: Georgian
+        meaning: HANCESTRO:0437
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Iranian:
+        text: Iranian
+        meaning: HANCESTRO:0438
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Iraqi:
+        text: Iraqi
+        meaning: HANCESTRO:0439
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Israeli:
+        text: Israeli
+        meaning: HANCESTRO:0440
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Jordanian:
+        text: Jordanian
+        meaning: HANCESTRO:0441
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Kuwaiti:
+        text: Kuwaiti
+        meaning: HANCESTRO:0442
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Lebanese:
+        text: Lebanese
+        meaning: HANCESTRO:0443
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Libyan:
+        text: Libyan
+        meaning: HANCESTRO:0444
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Moroccan:
+        text: Moroccan
+        meaning: HANCESTRO:0445
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Palestinian:
+        text: Palestinian
+        meaning: HANCESTRO:0446
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Omani:
+        text: Omani
+        meaning: HANCESTRO:0447
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Qatari:
+        text: Qatari
+        meaning: HANCESTRO:0448
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Saudi:
+        text: Saudi
+        meaning: HANCESTRO:0449
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Tunisian:
+        text: Tunisian
+        meaning: HANCESTRO:0450
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Emirati:
+        text: Emirati
+        meaning: HANCESTRO:0452
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Yemeni:
+        text: Yemeni
+        meaning: HANCESTRO:0453
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Syrian:
+        text: Syrian
+        meaning: HANCESTRO:0461
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      Arab Israeli founder:
+        text: Arab Israeli founder
+        meaning: HANCESTRO:0555
+        is_a: genetically isolated population
+      Arab:
+        text: Arab
+        meaning: HANCESTRO:0596
+        is_a: Greater Middle Eastern (Middle Eastern, North African or Persian)
+      African American or Afro-Caribbean:
+        text: African American or Afro-Caribbean
+        meaning: HANCESTRO:0016
+      Anguillan:
+        text: Anguillan
+        meaning: HANCESTRO:0333
+        is_a: African American or Afro-Caribbean
+      Antiguan or Barbudan:
+        text: Antiguan or Barbudan
+        meaning: HANCESTRO:0334
+        is_a: African American or Afro-Caribbean
+      Barbadian:
+        text: Barbadian
+        meaning: HANCESTRO:0335
+        is_a: African American or Afro-Caribbean
+      Haitian:
+        text: Haitian
+        meaning: HANCESTRO:0336
+        is_a: African American or Afro-Caribbean
+      Jamaican:
+        text: Jamaican
+        meaning: HANCESTRO:0337
+        is_a: African American or Afro-Caribbean
+      Afro-Caribbean:
+        text: Afro-Caribbean
+        meaning: HANCESTRO:0567
+        is_a: African American or Afro-Caribbean
+      African American:
+        text: African American
+        meaning: HANCESTRO:0568
+        is_a: African American or Afro-Caribbean
+      Oceanian:
+        text: Oceanian
+        meaning: HANCESTRO:0017
+      Micronesian:
+        text: Micronesian
+        meaning: HANCESTRO:0471
+        is_a: Oceanian
+      Papua New Guinean:
+        text: Papua New Guinean
+        meaning: HANCESTRO:0476
+        is_a: Oceanian
+      Solomon Islander:
+        text: Solomon Islander
+        meaning: HANCESTRO:0479
+        is_a: Oceanian
+      Kosraen:
+        text: Kosraen
+        meaning: HANCESTRO:0572
+        is_a: Oceanian
+      Native Hawaiian:
+        text: Native Hawaiian
+        meaning: HANCESTRO:0573
+        is_a: Oceanian
+      Pacific Islander:
+        text: Pacific Islander
+        meaning: HANCESTRO:0574
+        is_a: Oceanian
+      uncategorised population:
+        text: uncategorised population
+        meaning: HANCESTRO:0018
+      Ashkenazi Jew:
+        text: Ashkenazi Jew
+        meaning: HANCESTRO:0324
+        is_a: genetically isolated population
+      Afghan:
+        text: Afghan
+        meaning: HANCESTRO:0341
+        is_a: uncategorised population
+      Bulgarian:
+        text: Bulgarian
+        meaning: HANCESTRO:0353
+        is_a: uncategorised population
+      Norfolk Islander:
+        text: Norfolk Islander
+        meaning: HANCESTRO:0379
+        is_a: genetically isolated population
+      Russian:
+        text: Russian
+        meaning: HANCESTRO:0386
+        is_a: uncategorised population
+      Surinamese:
+        text: Surinamese
+        meaning: HANCESTRO:0425
+        is_a: uncategorised population
+      Turkish:
+        text: Turkish
+        meaning: HANCESTRO:0451
+        is_a: uncategorised population
+      Tatar:
+        text: Tatar
+        meaning: HANCESTRO:0585
+        is_a: uncategorised population
+      Bashkir:
+        text: Bashkir
+        meaning: HANCESTRO:0586
+        is_a: uncategorised population
+      Martu Australian Aboriginal:
+        text: Martu Australian Aboriginal
+        meaning: HANCESTRO:0587
+        is_a: uncategorised population
+      Jewish Israeli:
+        text: Jewish Israeli
+        meaning: HANCESTRO:0588
+        is_a: uncategorised population
+      Eskimo:
+        text: Eskimo
+        meaning: HANCESTRO:0595
+        is_a: uncategorised population
+      genetically isolated population:
+        text: genetically isolated population
+        meaning: HANCESTRO:0290
+      Aboriginal Australian:
+        text: Aboriginal Australian
+        meaning: HANCESTRO:0552
+      undefined ancestry population:
+        text: undefined ancestry population
+        meaning: HANCESTRO:0566
+      Tajikistani:
+        text: Tajikistani
+        meaning: HANCESTRO:0338
+        is_a: undefined ancestry population
+      Turkmen:
+        text: Turkmen
+        meaning: HANCESTRO:0339
+        is_a: undefined ancestry population
+      Uzbekistani:
+        text: Uzbekistani
+        meaning: HANCESTRO:0340
+        is_a: undefined ancestry population
+      Kazakhstani:
+        text: Kazakhstani
+        meaning: HANCESTRO:0342
+        is_a: undefined ancestry population
+      Kyrgyzstani:
+        text: Kyrgyzstani
+        meaning: HANCESTRO:0343
+        is_a: undefined ancestry population
+      Albanian:
+        text: Albanian
+        meaning: HANCESTRO:0344
+        is_a: undefined ancestry population
+      Andorran:
+        text: Andorran
+        meaning: HANCESTRO:0345
+        is_a: undefined ancestry population
+      Australian:
+        text: Australian
+        meaning: HANCESTRO:0346
+        is_a: undefined ancestry population
+      Austrian:
+        text: Austrian
+        meaning: HANCESTRO:0347
+        is_a: undefined ancestry population
+      Belarusian:
+        text: Belarusian
+        meaning: HANCESTRO:0348
+        is_a: undefined ancestry population
+      Belgian:
+        text: Belgian
+        meaning: HANCESTRO:0349
+        is_a: undefined ancestry population
+      Bermudian:
+        text: Bermudian
+        meaning: HANCESTRO:0350
+        is_a: undefined ancestry population
+      Bosnian or Herzegovinian:
+        text: Bosnian or Herzegovinian
+        meaning: HANCESTRO:0351
+        is_a: undefined ancestry population
+      Channel Islander:
+        text: Channel Islander
+        meaning: HANCESTRO:0355
+        is_a: undefined ancestry population
+      Chilean:
+        text: Chilean
+        meaning: HANCESTRO:0356
+        is_a: undefined ancestry population
+      Croatian:
+        text: Croatian
+        meaning: HANCESTRO:0357
+        is_a: undefined ancestry population
+      Czech:
+        text: Czech
+        meaning: HANCESTRO:0358
+        is_a: undefined ancestry population
+      Danish:
+        text: Danish
+        meaning: HANCESTRO:0359
+        is_a: undefined ancestry population
+      Estonian:
+        text: Estonian
+        meaning: HANCESTRO:0360
+        is_a: undefined ancestry population
+      Faroese:
+        text: Faroese
+        meaning: HANCESTRO:0361
+        is_a: undefined ancestry population
+      Falkland Islander:
+        text: Falkland Islander
+        meaning: HANCESTRO:0362
+        is_a: undefined ancestry population
+      French:
+        text: French
+        meaning: HANCESTRO:0363
+        is_a: undefined ancestry population
+      German:
+        text: German
+        meaning: HANCESTRO:0364
+        is_a: undefined ancestry population
+      Gibraltarian:
+        text: Gibraltarian
+        meaning: HANCESTRO:0365
+        is_a: undefined ancestry population
+      Greek:
+        text: Greek
+        meaning: HANCESTRO:0366
+        is_a: undefined ancestry population
+      Greenlander:
+        text: Greenlander
+        meaning: HANCESTRO:0367
+        is_a: undefined ancestry population
+      Hungrian:
+        text: Hungrian
+        meaning: HANCESTRO:0368
+        is_a: undefined ancestry population
+      Manx:
+        text: Manx
+        meaning: HANCESTRO:0370
+        is_a: undefined ancestry population
+      Latvian:
+        text: Latvian
+        meaning: HANCESTRO:0371
+        is_a: undefined ancestry population
+      Liechtensteiner:
+        text: Liechtensteiner
+        meaning: HANCESTRO:0372
+        is_a: undefined ancestry population
+      Lithuanian:
+        text: Lithuanian
+        meaning: HANCESTRO:0373
+        is_a: undefined ancestry population
+      Luxembourgish:
+        text: Luxembourgish
+        meaning: HANCESTRO:0374
+        is_a: undefined ancestry population
+      Maltese:
+        text: Maltese
+        meaning: HANCESTRO:0375
+        is_a: undefined ancestry population
+      Monegasque:
+        text: Monegasque
+        meaning: HANCESTRO:0376
+        is_a: undefined ancestry population
+      Montenegrin:
+        text: Montenegrin
+        meaning: HANCESTRO:0377
+        is_a: undefined ancestry population
+      New Zealandish:
+        text: New Zealandish
+        meaning: HANCESTRO:0378
+        is_a: undefined ancestry population
+      Norwegian:
+        text: Norwegian
+        meaning: HANCESTRO:0380
+        is_a: undefined ancestry population
+      Polish:
+        text: Polish
+        meaning: HANCESTRO:0381
+        is_a: undefined ancestry population
+      Portugese:
+        text: Portugese
+        meaning: HANCESTRO:0382
+        is_a: undefined ancestry population
+      Moldovan:
+        text: Moldovan
+        meaning: HANCESTRO:0384
+        is_a: undefined ancestry population
+      Romanian:
+        text: Romanian
+        meaning: HANCESTRO:0385
+        is_a: undefined ancestry population
+      Saint-Pierrais or Miquelonnais:
+        text: Saint-Pierrais or Miquelonnais
+        meaning: HANCESTRO:0387
+        is_a: undefined ancestry population
+      Sammarinese:
+        text: Sammarinese
+        meaning: HANCESTRO:0388
+        is_a: undefined ancestry population
+      Serb:
+        text: Serb
+        meaning: HANCESTRO:0389
+        is_a: undefined ancestry population
+      Slovak:
+        text: Slovak
+        meaning: HANCESTRO:0390
+        is_a: undefined ancestry population
+      Slovene:
+        text: Slovene
+        meaning: HANCESTRO:0391
+        is_a: undefined ancestry population
+      Swedish:
+        text: Swedish
+        meaning: HANCESTRO:0393
+        is_a: undefined ancestry population
+      Swiss:
+        text: Swiss
+        meaning: HANCESTRO:0394
+        is_a: undefined ancestry population
+      Macedonian:
+        text: Macedonian
+        meaning: HANCESTRO:0395
+        is_a: undefined ancestry population
+      Ukrainian:
+        text: Ukrainian
+        meaning: HANCESTRO:0396
+        is_a: undefined ancestry population
+      Argentine:
+        text: Argentine
+        meaning: HANCESTRO:0397
+        is_a: undefined ancestry population
+      Bahamian:
+        text: Bahamian
+        meaning: HANCESTRO:0398
+        is_a: undefined ancestry population
+      Belizean:
+        text: Belizean
+        meaning: HANCESTRO:0399
+        is_a: undefined ancestry population
+      Bolivian:
+        text: Bolivian
+        meaning: HANCESTRO:0400
+        is_a: undefined ancestry population
+      British Virgin Islander:
+        text: British Virgin Islander
+        meaning: HANCESTRO:0401
+        is_a: undefined ancestry population
+      Caymanian:
+        text: Caymanian
+        meaning: HANCESTRO:0402
+        is_a: undefined ancestry population
+      Colombian:
+        text: Colombian
+        meaning: HANCESTRO:0403
+        is_a: undefined ancestry population
+      Ecuadorian:
+        text: Ecuadorian
+        meaning: HANCESTRO:0407
+        is_a: undefined ancestry population
+      Salvadoran:
+        text: Salvadoran
+        meaning: HANCESTRO:0408
+        is_a: undefined ancestry population
+      French Guianese:
+        text: French Guianese
+        meaning: HANCESTRO:0409
+        is_a: undefined ancestry population
+      Grenadian:
+        text: Grenadian
+        meaning: HANCESTRO:0410
+        is_a: undefined ancestry population
+      Guatemalan:
+        text: Guatemalan
+        meaning: HANCESTRO:0411
+        is_a: undefined ancestry population
+      Guyanese:
+        text: Guyanese
+        meaning: HANCESTRO:0412
+        is_a: undefined ancestry population
+      Honduran:
+        text: Honduran
+        meaning: HANCESTRO:0413
+        is_a: undefined ancestry population
+      Martinican:
+        text: Martinican
+        meaning: HANCESTRO:0414
+        is_a: undefined ancestry population
+      Montserratian:
+        text: Montserratian
+        meaning: HANCESTRO:0416
+        is_a: undefined ancestry population
+      Nicaraguan:
+        text: Nicaraguan
+        meaning: HANCESTRO:0417
+        is_a: undefined ancestry population
+      Panamanian:
+        text: Panamanian
+        meaning: HANCESTRO:0418
+        is_a: undefined ancestry population
+      Paraguayan:
+        text: Paraguayan
+        meaning: HANCESTRO:0419
+        is_a: undefined ancestry population
+      Peruvian:
+        text: Peruvian
+        meaning: HANCESTRO:0420
+        is_a: undefined ancestry population
+      Kittitian or Nevisian:
+        text: Kittitian or Nevisian
+        meaning: HANCESTRO:0422
+        is_a: undefined ancestry population
+      Saint Lucian:
+        text: Saint Lucian
+        meaning: HANCESTRO:0423
+        is_a: undefined ancestry population
+      Saint Vincentian:
+        text: Saint Vincentian
+        meaning: HANCESTRO:0424
+        is_a: undefined ancestry population
+      Trinidadian or Tobagonian:
+        text: Trinidadian or Tobagonian
+        meaning: HANCESTRO:0426
+        is_a: undefined ancestry population
+      Turks and Caicos Islander:
+        text: Turks and Caicos Islander
+        meaning: HANCESTRO:0427
+        is_a: undefined ancestry population
+      Virgin Islander:
+        text: Virgin Islander
+        meaning: HANCESTRO:0428
+        is_a: undefined ancestry population
+      Uruguayan:
+        text: Uruguayan
+        meaning: HANCESTRO:0429
+        is_a: undefined ancestry population
+      Venezuelan:
+        text: Venezuelan
+        meaning: HANCESTRO:0430
+        is_a: undefined ancestry population
+      Aruban:
+        text: Aruban
+        meaning: HANCESTRO:0454
+        is_a: undefined ancestry population
+      Christmas Islander:
+        text: Christmas Islander
+        meaning: HANCESTRO:0455
+        is_a: undefined ancestry population
+      Cocos Islander:
+        text: Cocos Islander
+        meaning: HANCESTRO:0456
+        is_a: undefined ancestry population
+      Curacaoan:
+        text: Curacaoan
+        meaning: HANCESTRO:0457
+        is_a: undefined ancestry population
+      Kosovar:
+        text: Kosovar
+        meaning: HANCESTRO:0458
+        is_a: undefined ancestry population
+      Northern Mariana Islander:
+        text: Northern Mariana Islander
+        meaning: HANCESTRO:0459
+        is_a: undefined ancestry population
+      South Sudanese:
+        text: South Sudanese
+        meaning: HANCESTRO:0460
+        is_a: undefined ancestry population
+      American:
+        text: American
+        meaning: HANCESTRO:0463
+        is_a: undefined ancestry population
+      American Samoan:
+        text: American Samoan
+        meaning: HANCESTRO:0464
+        is_a: undefined ancestry population
+      Cook Islander:
+        text: Cook Islander
+        meaning: HANCESTRO:0465
+        is_a: undefined ancestry population
+      Fijian:
+        text: Fijian
+        meaning: HANCESTRO:0466
+        is_a: undefined ancestry population
+      French Polynesian:
+        text: French Polynesian
+        meaning: HANCESTRO:0467
+        is_a: undefined ancestry population
+      Guamanian:
+        text: Guamanian
+        meaning: HANCESTRO:0468
+        is_a: undefined ancestry population
+      I-Kiribati:
+        text: I-Kiribati
+        meaning: HANCESTRO:0469
+        is_a: undefined ancestry population
+      Marshallese:
+        text: Marshallese
+        meaning: HANCESTRO:0470
+        is_a: undefined ancestry population
+      Nauruan:
+        text: Nauruan
+        meaning: HANCESTRO:0472
+        is_a: undefined ancestry population
+      New Caledonian:
+        text: New Caledonian
+        meaning: HANCESTRO:0473
+        is_a: undefined ancestry population
+      Niuean:
+        text: Niuean
+        meaning: HANCESTRO:0474
+        is_a: undefined ancestry population
+      Palauan:
+        text: Palauan
+        meaning: HANCESTRO:0475
+        is_a: undefined ancestry population
+      Pitcairn Islander:
+        text: Pitcairn Islander
+        meaning: HANCESTRO:0477
+        is_a: undefined ancestry population
+      Samoan:
+        text: Samoan
+        meaning: HANCESTRO:0478
+        is_a: undefined ancestry population
+      Tokelauan:
+        text: Tokelauan
+        meaning: HANCESTRO:0480
+        is_a: undefined ancestry population
+      Tongan:
+        text: Tongan
+        meaning: HANCESTRO:0481
+        is_a: undefined ancestry population
+      Tuvaluan:
+        text: Tuvaluan
+        meaning: HANCESTRO:0482
+        is_a: undefined ancestry population
+      Ni-Vanuato:
+        text: Ni-Vanuato
+        meaning: HANCESTRO:0483
+        is_a: undefined ancestry population
+      Wallis and Futuna Islander:
+        text: Wallis and Futuna Islander
+        meaning: HANCESTRO:0484
+        is_a: undefined ancestry population
+      Bhutanese:
+        text: Bhutanese
+        meaning: HANCESTRO:0486
+        is_a: undefined ancestry population
+      Maldivian:
+        text: Maldivian
+        meaning: HANCESTRO:0488
+        is_a: undefined ancestry population
+      Bruneian:
+        text: Bruneian
+        meaning: HANCESTRO:0492
+        is_a: undefined ancestry population
+      Cambodian:
+        text: Cambodian
+        meaning: HANCESTRO:0493
+        is_a: undefined ancestry population
+      Lao:
+        text: Lao
+        meaning: HANCESTRO:0495
+        is_a: undefined ancestry population
+      Burmese:
+        text: Burmese
+        meaning: HANCESTRO:0497
+        is_a: undefined ancestry population
+      Timorese:
+        text: Timorese
+        meaning: HANCESTRO:0501
+        is_a: undefined ancestry population
+      Cameroonian:
+        text: Cameroonian
+        meaning: HANCESTRO:0503
+        is_a: undefined ancestry population
+      Cape Verdean:
+        text: Cape Verdean
+        meaning: HANCESTRO:0504
+        is_a: undefined ancestry population
+      Chadian:
+        text: Chadian
+        meaning: HANCESTRO:0505
+        is_a: undefined ancestry population
+      Ethiopian:
+        text: Ethiopian
+        meaning: HANCESTRO:0506
+        is_a: undefined ancestry population
+      Kenyan:
+        text: Kenyan
+        meaning: HANCESTRO:0507
+        is_a: undefined ancestry population
+      Liberian:
+        text: Liberian
+        meaning: HANCESTRO:0508
+        is_a: undefined ancestry population
+      Malagasy:
+        text: Malagasy
+        meaning: HANCESTRO:0509
+        is_a: undefined ancestry population
+      Mauritanian:
+        text: Mauritanian
+        meaning: HANCESTRO:0510
+        is_a: undefined ancestry population
+      Mauritian:
+        text: Mauritian
+        meaning: HANCESTRO:0511
+        is_a: undefined ancestry population
+      Mahoran:
+        text: Mahoran
+        meaning: HANCESTRO:0512
+        is_a: undefined ancestry population
+      Namibian:
+        text: Namibian
+        meaning: HANCESTRO:0513
+        is_a: undefined ancestry population
+      Sao Tomean:
+        text: Sao Tomean
+        meaning: HANCESTRO:0514
+        is_a: undefined ancestry population
+      Senegalese:
+        text: Senegalese
+        meaning: HANCESTRO:0515
+        is_a: undefined ancestry population
+      Seychellois:
+        text: Seychellois
+        meaning: HANCESTRO:0516
+        is_a: undefined ancestry population
+      Sierra Leonean:
+        text: Sierra Leonean
+        meaning: HANCESTRO:0517
+        is_a: undefined ancestry population
+      Somali:
+        text: Somali
+        meaning: HANCESTRO:0518
+        is_a: undefined ancestry population
+      South African:
+        text: South African
+        meaning: HANCESTRO:0519
+        is_a: undefined ancestry population
+      St. Helenian:
+        text: St. Helenian
+        meaning: HANCESTRO:0520
+        is_a: undefined ancestry population
+      Ugandan:
+        text: Ugandan
+        meaning: HANCESTRO:0521
+        is_a: undefined ancestry population
+      Angolan:
+        text: Angolan
+        meaning: HANCESTRO:0522
+        is_a: undefined ancestry population
+      Beninese:
+        text: Beninese
+        meaning: HANCESTRO:0523
+        is_a: undefined ancestry population
+      Motswana:
+        text: Motswana
+        meaning: HANCESTRO:0524
+        is_a: undefined ancestry population
+      Burkinabe:
+        text: Burkinabe
+        meaning: HANCESTRO:0525
+        is_a: undefined ancestry population
+      Burundian:
+        text: Burundian
+        meaning: HANCESTRO:0526
+        is_a: undefined ancestry population
+      Central African:
+        text: Central African
+        meaning: HANCESTRO:0527
+        is_a: undefined ancestry population
+      Comoran:
+        text: Comoran
+        meaning: HANCESTRO:0528
+        is_a: undefined ancestry population
+      Congolese:
+        text: Congolese
+        meaning: HANCESTRO:0529
+        is_a: undefined ancestry population
+      Ivoirian:
+        text: Ivoirian
+        meaning: HANCESTRO:0530
+        is_a: undefined ancestry population
+      Djiboutian:
+        text: Djiboutian
+        meaning: HANCESTRO:0531
+        is_a: undefined ancestry population
+      Equatorial Guinean:
+        text: Equatorial Guinean
+        meaning: HANCESTRO:0532
+        is_a: undefined ancestry population
+      Eritrean:
+        text: Eritrean
+        meaning: HANCESTRO:0533
+        is_a: undefined ancestry population
+      Gabonese:
+        text: Gabonese
+        meaning: HANCESTRO:0534
+        is_a: undefined ancestry population
+      Ghanaian:
+        text: Ghanaian
+        meaning: HANCESTRO:0536
+        is_a: undefined ancestry population
+      Guinean:
+        text: Guinean
+        meaning: HANCESTRO:0537
+        is_a: undefined ancestry population
+      Bissau-Guinean:
+        text: Bissau-Guinean
+        meaning: HANCESTRO:0538
+        is_a: undefined ancestry population
+      Mosotho:
+        text: Mosotho
+        meaning: HANCESTRO:0539
+        is_a: undefined ancestry population
+      Malian:
+        text: Malian
+        meaning: HANCESTRO:0541
+        is_a: undefined ancestry population
+      Mozambican:
+        text: Mozambican
+        meaning: HANCESTRO:0542
+        is_a: undefined ancestry population
+      Nigerien:
+        text: Nigerien
+        meaning: HANCESTRO:0543
+        is_a: undefined ancestry population
+      Rwandan:
+        text: Rwandan
+        meaning: HANCESTRO:0545
+        is_a: undefined ancestry population
+      Swazi:
+        text: Swazi
+        meaning: HANCESTRO:0546
+        is_a: undefined ancestry population
+      Togolese:
+        text: Togolese
+        meaning: HANCESTRO:0547
+        is_a: undefined ancestry population
+      Zambian:
+        text: Zambian
+        meaning: HANCESTRO:0549
+        is_a: undefined ancestry population
+      Zimbabweian:
+        text: Zimbabweian
+        meaning: HANCESTRO:0550
+        is_a: undefined ancestry population
+types:
+  WhitespaceMinimizedString:
+    name: WhitespaceMinimizedString
+    typeof: string
+    description: 'A string that has all whitespace trimmed off of beginning and end,
+      and all internal whitespace segments reduced to single spaces. Whitespace includes
+      #x9 (tab), #xA (linefeed), and #xD (carriage return).'
+    base: str
+    uri: xsd:token
+  Provenance:
+    name: Provenance
+    typeof: string
+    description: A field containing a DataHarmonizer versioning marker. It is issued
+      by DataHarmonizer when validation is applied to a given row of data.
+    base: str
+    uri: xsd:token
+settings:
+  Title_Case: (((?<=\b)[^a-z\W]\w*?|[\W])+)
+  UPPER_CASE: '[A-Z\W\d_]*'
+  lower_case: '[a-z\W\d_]*'
