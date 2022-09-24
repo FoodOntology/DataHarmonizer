@@ -1,10 +1,8 @@
 # DataHarmonizer
 
-A standardized browser-based spreadsheet editor and validator that can be run offline and locally, which works of of [LinkML](https://linkml.io/) data specifications. This project, created by the Centre for Infectious Disease Genomics and One Health (CIDGOH), at Simon Fraser University, is now an open-source collaboration with contributions from the National Microbiome Data Collaborative (NMDC), the LinkML development team, and others.
+A standardized browser-based spreadsheet editor and validator that can be run offline and locally, which works of of [LinkML](https://linkml.io/) data specifications. This is an experimental version of DataHarmonizer being used to develop a **food recipe model** as part of the FoodOn project.
 
-Watch Rhiannon Cameron and Damion Dooley describe this application on [YouTube](https://www.youtube.com/watch?v=rdN2_Vhwb8E&t=38s&ab_channel=CANARIEInc.) at the Canadian Research Software Conference (CRSC2021).
-
-Note that the **Pathogen Genomics Package** of DataHarmonizer templates, which includes Covid-19 and Monkeypox, is available now as a simpler stand-alone zip file at [https://github.com/cidgoh/pathogen-genomics-package](https://github.com/cidgoh/pathogen-genomics-package).
+This project, created by the Centre for Infectious Disease Genomics and One Health (CIDGOH), at Simon Fraser University, is now an open-source collaboration with contributions from the National Microbiome Data Collaborative (NMDC), the LinkML development team, and others.  Watch Rhiannon Cameron and Damion Dooley describe this application on [YouTube](https://www.youtube.com/watch?v=rdN2_Vhwb8E&t=38s&ab_channel=CANARIEInc.) at the Canadian Research Software Conference (CRSC2021).
 
 |Chrome|Firefox|Edge|
 |---|---|---|
@@ -15,33 +13,27 @@ Note that the **Pathogen Genomics Package** of DataHarmonizer templates, which i
 ## Installation
 
 This repository currently contains two kinds of release. 
-1) A stand-alone browser-based version of DataHarmonizer that includes templates for detailing **SARS-CoV-2 and Monkeypox** sample contextual data. Release notes indicate which versions of these templates are included. More infectious disease templates will be included in the comming year. Other organizations are adopting this version of DataHarmonizer for their own data management purposes.
+1) A stand-alone browser-based version of DataHarmonizer that includes templates for modelling **recipes**. Release notes indicate which versions of these templates are included.
+
 ```
 To get the stand-alone version, download the zipped source code from the latest release at:
 https://github.com/Public-Health-Bioinformatics/DataHarmonizer/releases
 
 Extract the zipped file.
 
-To run the application, navigate to the extracted folder and open `index.html`.
+To run the application, navigate to the extracted folder and open `web/dist/index.html`.
 
-```
-
-2) A full development environment including the scripts necessary to generate a code library for **API** use, as well as the stand-alone version. Instructions for setting this up is in the **Development** section below. The API is used by the https://data.microbiomedata.org/ project for data collection.  Using the API allows DataHarmonizer to be presented in a custom user interface, with a specific template pre-loaded for example, and select controls menu items constructed as desired in the interface.
+Alternately, to run the application in development mode so that it is responsive to changes in linkml schemas and templates that you are editing, see the **Development** section below. 
 
 # Stand-Alone DataHarmonizer Functionality
 
 ## Select Template
 
-The default template loaded is the "CanCOGeN Covid-19" template. To change the spreadsheet template, select the white text box to the right of **Template**, it always contains the name of template currently active, or navigated to **File** followed by **Change Template**. An in-app window will appear that allows you to select from the available templates in the drop-down menu. After selecting the desired template, click **Open** to activate the template.
+The default template loaded is the "food recipe" template. To change the spreadsheet template, select the white text box to the right of **Template**, it always contains the name of template currently active, or navigated to **File** followed by **Change Template**. An in-app window will appear that allows you to select from the available templates in the drop-down menu. After selecting the desired template, click **Open** to activate the template.
 
 ![change template](./images/changeTemplate.gif)
 
-A second way to access templates directly, rather than by the hard-coded menu system, is to specify the DataHarmonizer template subfolder via a "template" URL parameter. This enables development and use of customized templates, or new ones, that DH doesn't have programmed in menu.  
-
-For example,
-http://genepio.org/DataHarmonizer/main.html?template=gisaid accesses the /template/gsiaid/ subfolder's template directly.  
-
-See more on the Wiki [DataHarmonizer templates](https://github.com/Public-Health-Bioinformatics/DataHarmonizer/wiki/DataHarmonizer-Templates) page.
+See more on the Wiki [DataHarmonizer templates](https://github.com/cidgoh/DataHarmonizer/wiki/DataHarmonizer-Templates) page.
 
 ## Usage
 
@@ -83,9 +75,22 @@ The stand-alone version of DataHarmonizer when built is placed in the /web/dist/
 │   └── ...
 ```
 
-Note that the source of the built "template/" folder above is actually in /web/templates/, where example input data should be placed before performing the build process.  Here is an example links to all available test data for the CanCOGeN Covid-19 template:
+Note that the source of the built "template/" folder above is actually in /web/templates/, where example input data should be placed before performing the build process.  You will see a recipe folder there with under development schemas for recipe-related ontology-driven data structures.
 
-- [`canada_covid19`](https://github.com/cidgoh/DataHarmonizer/tree/master/web/templates/canada_covid19/exampleInput) CanCOGeN Covid-19
+- [`recipe`](https://github.com/FoodOntology/DataHarmonizer/tree/master/web/templates/recipe/) templates.
+
+Having made changes to either of:
+
+  web/templates/recipe/schema_core.yaml
+  web/templates/recipe/schema_slots.tsv
+  web/templates/recipe/schema_enums.tsv
+
+Rerun:
+
+  python ../../../script/tabular_to_schema.py
+  python ../../../script/linkml.py -i schema.yaml
+  
+To regenerate the schema.json file which drives DataHarmonizer template options.
 
 
 ## Version Control
